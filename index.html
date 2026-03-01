@@ -1,214 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naresh Pratap</title>
 
-    <!-- Meta Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }
-        (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1183539050152137');
-        fbq('track', 'PageView');
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1183539050152137&ev=PageView&noscript=1"/>
-</noscript>
-    <!-- End Meta Pixel Code -->
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garud Fixer (Baazigar)</title>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1542144582-1ba00456b5e3') no-repeat center center/cover;
+}
 
-    <!-- Preload background for faster render -->
-    <link rel="preload" as="image" href="https://applescoop.org/image/wallpapers/iphone/iphone-dark-black-and-blue-abstract-impede-depth-effect-with-think-lines-apple-iphone-21-09-2025-1758398684-hd-wallpaper.webp">
+.card{
+    width:90%;
+    max-width:420px;
+    padding:30px 20px;
+    border-radius:25px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 0 40px rgba(0,255,100,0.2);
+    text-align:center;
+    color:white;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-        }
+.card h1{
+    font-size:32px;
+    font-weight:800;
+    color:#8eff9b;
+    letter-spacing:2px;
+}
 
-        body {
-            background: #0c0f1a url("https://applescoop.org/image/wallpapers/iphone/iphone-dark-black-and-blue-abstract-impede-depth-effect-with-think-lines-apple-iphone-21-09-2025-1758398684-hd-wallpaper.webp") center/cover no-repeat fixed;
-            color: #fff;
-            min-height: 100vh;
-        }
+.card h2{
+    font-size:20px;
+    margin-top:10px;
+    color:#ffd700;
+    font-weight:600;
+}
 
-        .overlay {
-            background: rgba(10, 12, 22, .82);
-            min-height: 100vh;
-        }
+.feature{
+    margin-top:20px;
+    background: rgba(255,255,255,0.07);
+    padding:12px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border-left:4px solid #8eff9b;
+}
 
-        .container {
-            max-width: 420px;
-            margin: auto;
-            padding: 20px 15px 90px;
-        }
+.check{
+    width:22px;
+    height:22px;
+    background:#ffd700;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:black;
+    font-size:14px;
+    font-weight:bold;
+}
 
-        /* Profile */
+.feature p{
+    font-size:15px;
+}
 
-        .profile-box {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.btn{
+    margin-top:25px;
+    display:block;
+    width:100%;
+    padding:14px;
+    border-radius:15px;
+    font-size:16px;
+    font-weight:700;
+    text-decoration:none;
+    transition:0.3s;
+}
 
-        .profile-box img {
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            border: 2px solid #ffffff55;
-        }
+.main-btn{
+    background:linear-gradient(45deg,#00c853,#64dd17);
+    color:white;
+    box-shadow:0 0 20px rgba(0,255,100,0.5);
+}
 
-        .profile-box h1 {
-            margin-top: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+.main-btn:hover{
+    transform:scale(1.05);
+}
 
-        /* Card */
+.backup-btn{
+    margin-top:15px;
+    border:2px solid rgba(255,255,255,0.4);
+    color:white;
+    background:transparent;
+}
 
-        .card {
-            background: #ffffff12;
-            border: 1px solid #ffffff20;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.backup-btn:hover{
+    background:rgba(255,255,255,0.1);
+}
 
-        /* Button */
+.footer-box{
+    margin-top:20px;
+    padding:10px;
+    border-radius:12px;
+    background: rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+}
 
-        .btn {
-            display: block;
-            margin-top: 14px;
-            padding: 14px;
-            border-radius: 30px;
-            background: #1fa2ff;
-            color: #fff;
-            font-weight: 700;
-            text-decoration: none;
-        }
+.footer-box a{
+    color:#8eff9b;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
 
-        /* Features */
-
-        .features {
-            list-style: none;
-            margin-top: 8px;
-        }
-
-        .features li {
-            font-size: .95rem;
-            margin: 6px 0;
-        }
-
-        .features li::before {
-            content: "✓ ";
-            color: #4caf50;
-        }
-
-        /* Footer */
-
-        .footer {
-            text-align: center;
-            font-size: .85rem;
-            opacity: .85;
-        }
-
-        .footer a {
-            color: #6bd4ff;
-            text-decoration: none;
-        }
-
-        /* Bottom CTA */
-
-        .bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #000000cc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .bottom-bar a {
-            display: inline-block;
-            width: 90%;
-            max-width: 320px;
-            padding: 14px;
-            border-radius: 30px;
-            background: #12d8fa;
-            color: #000;
-            font-weight: 700;
-            text-decoration: none;
-        }
-    </style>
+.footer-box a:hover{
+    text-decoration:underline;
+}
+</style>
 </head>
-
 <body>
-    <div class="overlay">
 
-        <div class="container">
+<div class="card">
+    <h1>NARESH PRATAP</h1>
+    <h2>PROFESSIONAL TENNIS ANALYST</h2>
 
-            <div class="profile-box">
-                <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6952a267b21b7_40bb2f3d-25fd-484d-9b63-a8468a701820.jfif" alt="Garud Fixer">
-                <h1>Garud Fixer (Baazigar)</h1>
-            </div>
-
-            <div class="card">
-                <h2>Cricket Match Predictions</h2>
-                <p style="opacity:.9;">Well researched match insights & analysis</p>
-                <a href="https://t.me/+9WnufKITJK9lM2I1" class="btn">Join Free Telegram Channel</a>
-            </div>
-
-            <div class="card">
-                <h2>What You Get</h2>
-                <ul class="features">
-                    <li>Match & Toss Analysis</li>
-                    <li>Team Performance Insights</li>
-                    <li>Daily Free Updates</li>
-                    <li>Simple & Clean Info</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <p style="opacity:.9;">
-                    Trusted by thousands of cricket lovers across India.
-                </p>
-            </div>
-
-            <div class="footer">
-                Marketing by :
-                <a href="https://t.me/+lpl9wSvnR3YyZjA1">QB Agency™</a>
-            </div>
-
-        </div>
-
-        <div class="bottom-bar">
-            <a href="https://t.me/+9WnufKITJK9lM2I1">अभी टेलीग्राम जॉइन करें</a>
-        </div>
-
+    <div class="feature">
+        <div class="check">✓</div>
+        <p>20/20 Match Pass Accuracy</p>
     </div>
-</body>
 
+    <div class="feature">
+        <div class="check">✓</div>
+        <p>Grand Slam Expert Analysis</p>
+    </div>
+
+    <div class="feature">
+        <div class="check">✓</div>
+        <p>ATP/WTA Tournament Predictions</p>
+    </div>
+
+    <a href="https://t.me/+TxoNn2u_qbwzODI9" target="_blank" class="btn main-btn">
+        JOIN MAIN CHANNEL
+    </a>
+
+    <a href="#" class="btn backup-btn">
+        JOIN BACKUP CHANNEL
+    </a>
+
+    <!-- Small Bottom Box -->
+    <div class="footer-box">
+        <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
+            Ads By Ck Ads Agancy
+        </a>
+    </div>
+
+</div>
+
+</body>
 </html>
